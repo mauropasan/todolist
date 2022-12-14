@@ -11,11 +11,6 @@ export default {
             todos: store.state.todos
         }
     },
-    methods: {
-        delTodo(id) {
-            store.delTodoFromStore(id)
-        }
-    }
 }
 </script>
 
@@ -23,7 +18,7 @@ export default {
     <template v-if="todos.length">
     <p>Total de tareas: {{ todos.length }}</p>
         <ul>
-            <todo v-for="todo in todos" :todo="todo" @del="delTodo"></todo>
+            <todo v-for="todo in todos" :todo="todo"></todo>
         </ul>
     </template>
     <p v-else>No hay tareas para mostrar.</p>

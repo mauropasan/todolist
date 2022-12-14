@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         del() {
-            this.$emit('del', this.todo.id)
+            store.delTodoFromStore(this.todo.id)
         },
         changeDone() {
             store.changeDone(this.todo.id)
